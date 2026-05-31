@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import Button from '../ui/Button'
+import IconButton from '../ui/IconButton'
 import useFocusTrap from '../../hooks/useFocusTrap'
 import useBodyScrollLock from '../../hooks/useBodyScrollLock'
 
@@ -53,17 +54,16 @@ function Header() {
         <div className="px-[24px] sm:px-[60px] 2xl:px-[210px] mx-auto pt-[50px]">
             <div className="flex items-center justify-between gap-4">
                 {/* Mobile hamburger - top-LEFT */}
-                <Button
-                    variant="unstyled"
+                <IconButton
                     ref={hamburgerButtonRef}
                     onClick={openMenu}
                     aria-label="Open navigation menu"
                     aria-expanded={isMenuOpen}
                     aria-controls="mobile-nav-drawer"
-                    className="block md:hidden cursor-pointer text-white order-1"
+                    className="block md:hidden text-white order-1"
                 >
                     <HamburgerIcon />
-                </Button>
+                </IconButton>
 
                 {/* Logo + desktop nav */}
                 <div className="flex items-center order-2 md:order-1">
@@ -89,8 +89,8 @@ function Header() {
                     <li className="hidden md:block">
                         <h3>Sign in</h3>
                     </li>
-                    <li className="px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] flex items-center justify-center">
-                        <Button variant="unstyled" className="whitespace-nowrap">Sign Up</Button>
+                    <li>
+                        <Button variant="signup" size="desktop">Sign Up</Button>
                     </li>
                 </ul>
 
@@ -125,14 +125,13 @@ function Header() {
                 >
                     <div className="flex items-center justify-between px-6 pt-6">
                         <img src="logo.png" alt="Analytics logo" className="h-8 w-auto" />
-                        <Button
-                            variant="unstyled"
+                        <IconButton
                             onClick={closeMenu}
                             aria-label="Close navigation menu"
-                            className="text-[#8794BA] hover:text-white cursor-pointer p-2 -mr-2"
+                            className="text-[#8794BA] hover:text-white p-2 -mr-2"
                         >
                             <CloseIcon />
-                        </Button>
+                        </IconButton>
                     </div>
 
                     <nav aria-label="Mobile">
@@ -145,18 +144,18 @@ function Header() {
                                 </li>
                             ))}
                             <li>
-                                <ThemeToggle variant="drawer" className="w-full justify-center" />
+                                <ThemeToggle className="w-full justify-center" />
                             </li>
                             <li className="hover:text-white cursor-pointer">
                                 <a href="#sign-in" onClick={closeMenu}>
                                     <h3>Sign in</h3>
                                 </a>
                             </li>
-                            <li className="px-[43px] py-[10px] rounded-[68px] border border-[#465B95] cursor-pointer group hover:border-white flex items-center justify-center">
+                            <li>
                                 <Button
-                                    variant="unstyled"
+                                    variant="signup"
+                                    size="drawer"
                                     onClick={closeMenu}
-                                    className="whitespace-nowrap group-hover:text-white"
                                 >
                                     Sign Up
                                 </Button>

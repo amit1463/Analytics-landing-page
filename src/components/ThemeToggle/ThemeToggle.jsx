@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useTheme } from '../../context/useTheme'
-import Button from '../ui/Button'
+import IconButton from '../ui/IconButton'
 
 function SunIcon({ className = 'w-5 h-5' }) {
     return (
@@ -31,32 +31,28 @@ function MoonIcon({ className = 'w-5 h-5' }) {
 }
 
 /**
- * Light/Dark theme toggle. `variant` controls coloring so the same
- * component fits both the dark hero header and the drawer.
+ * Light/Dark theme toggle. `variant` is accepted for backward
+ * compatibility with the drawer caller; both header and drawer share
+ * the same outline pill styling, which lives on the shared IconButton.
  */
-function ThemeToggle({ variant = 'header', className = '' }) {
+function ThemeToggle({ className = '' }) {
     const { theme, toggleTheme } = useTheme()
     const isDark = theme === 'dark'
 
-    const variantClass =
-        variant === 'drawer'
-            ? 'border-[#465B95] text-[#8794BA] hover:text-white hover:border-white'
-            : 'border-[#465B95] text-[#8794BA] hover:text-white hover:border-white'
-
     return (
-        <Button
-            variant="unstyled"
+        <IconButton
+            tone="outline"
             onClick={toggleTheme}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             aria-pressed={isDark}
             title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className={`inline-flex items-center justify-center gap-2 rounded-full border px-3 py-2 text-[14px] leading-[16px] transition-colors cursor-pointer ${variantClass} ${className}`}
+            className={className}
         >
             {isDark ? <SunIcon /> : <MoonIcon />}
             <span className="whitespace-nowrap">
                 {isDark ? 'Light mode' : 'Dark mode'}
             </span>
-        </Button>
+        </IconButton>
     )
 }
 
