@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from "../ui/Button"
 
 
 function Hero() {
@@ -9,11 +10,11 @@ function Hero() {
             <div className='bg-[#EF2A82] min-h-[798px] [clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)] md:[clip-path:polygon(0%_0%,100%_0%,100%_75%,0%_100%)] border-b'>
                 <div className='bg-[#172755] min-h-[798px] [clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)] md:[clip-path:polygon(0%_0%,100%_0%,100%_75%,0%_100%)] mb-6'>
                     <div className={`${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} block md:hidden transition duration-300 bg-[#0f1a3d] fixed left-0 right-0 h-auto`}>
-                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="absolute right-4 top-4 cursor-pointer">
+                        <Button variant="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} className="absolute right-4 top-4" aria-label="Close menu">
                             <svg className="w-4 h-4 text-[#8794BA] hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
                             </svg>
-                        </button>
+                        </Button>
                         <ul className='flex flex-col items-center justify-center py-10 gap-9 text-[#8794BA]  text-[16px] leading-[18px] font-normal'>
                             <li className="hover:text-white cursor-pointer">
                                 <h3>Products</h3>
@@ -31,7 +32,7 @@ function Hero() {
                                 <h3>Contact</h3>
                             </li>
                             <li className='px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] cursor-pointer group hover:border-white flex items-center justify-center'>
-                                <button className='whitespace-nowrap group-hover:text-white'>Sign Up</button>
+                                <Button variant="ghost">Sign Up</Button>
                             </li>
                         </ul>
                     </div>
@@ -66,14 +67,14 @@ function Hero() {
                                     <a href="#signin"><h3>Sign in</h3></a>
                                 </li>
                                 <li className='px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] flex items-center justify-center cursor-pointer hover:border-white group'>
-                                    <button type="button" className='whitespace-nowrap cursor-pointer group-hover:text-white'>Sign Up</button>
+                                    <Button variant="ghost">Sign Up</Button>
                                 </li>
                             </ul>
-                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="block md:hidden cursor-pointer">
+                            <Button variant="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} className="block md:hidden" aria-label="Open menu">
                                 <svg className="w-6 h-6 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                                 </svg>
-                            </button>
+                            </Button>
                         </div>
                         <div className='inline-flex text-center xl:text-start flex-col 2xl:justify-start mt-[80px] xl:mt-[152px]'>
                             <h1 className='font-semibold text-[36px] sm:text-[50px] leading-[60px] text-white xl:max-w-[570px]'>
@@ -83,9 +84,9 @@ function Hero() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
                             </h3>
                             <div>
-                                <button type="button" className='mt-[20px] sm:mt-[50px] px-[80px] w-[238px] rounded-[68px] py-[16px] bg-[#EF2A82] inline-flex text-white text-[16px] leading-[18px] font-normal'>
+                                <Button variant="primary">
                                     Try for free
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </div>
