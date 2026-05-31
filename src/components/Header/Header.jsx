@@ -147,18 +147,18 @@ function Header() {
                     <nav aria-label="Mobile">
                         <ul className="flex flex-col px-6 pt-10 gap-7 text-[#8794BA] text-[16px] leading-[18px] font-normal">
                             {NAV_ITEMS.map((item) => (
-                                <li key={item} className="hover:text-white cursor-pointer">
+                                <li key={item} className="hover:text-white">
                                     <a href={`#${item.toLowerCase()}`} onClick={closeMenu}>
-                                        <h3>{item}</h3>
+                                        {item}
                                     </a>
                                 </li>
                             ))}
                             <li className="flex justify-center">
                                 <ThemeToggle onToggle={closeMenu} />
                             </li>
-                            <li className="hover:text-white cursor-pointer">
+                            <li className="hover:text-white">
                                 <a href="#sign-in" onClick={closeMenu}>
-                                    <h3>Sign in</h3>
+                                    Sign in
                                 </a>
                             </li>
                             <li>
