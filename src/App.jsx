@@ -6,7 +6,7 @@ import Pricing from './components/Pricing/Pricing'
 
 function App() {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden bg-white dark:bg-[#0b1430] text-[#172755] dark:text-white transition-colors'>
       <Hero/>
       <FeatureItems/>
       <FeatureDescriptions/>
