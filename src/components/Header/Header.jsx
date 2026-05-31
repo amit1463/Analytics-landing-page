@@ -143,8 +143,8 @@ function Header() {
                                     </a>
                                 </li>
                             ))}
-                            <li>
-                                <ThemeToggle className="w-full justify-center" />
+                            <li className="flex justify-center">
+                                <ThemeToggle onToggle={closeMenu} />
                             </li>
                             <li className="hover:text-white cursor-pointer">
                                 <a href="#sign-in" onClick={closeMenu}>
