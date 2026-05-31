@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useTheme } from '../../context/useTheme'
+import Button from '../ui/Button'
 
 function SunIcon({ className = 'w-5 h-5' }) {
     return (
@@ -43,8 +44,8 @@ function ThemeToggle({ variant = 'header', className = '' }) {
             : 'border-[#465B95] text-[#8794BA] hover:text-white hover:border-white'
 
     return (
-        <button
-            type="button"
+        <Button
+            variant="unstyled"
             onClick={toggleTheme}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             aria-pressed={isDark}
@@ -55,7 +56,7 @@ function ThemeToggle({ variant = 'header', className = '' }) {
             <span className="whitespace-nowrap">
                 {isDark ? 'Light mode' : 'Dark mode'}
             </span>
-        </button>
+        </Button>
     )
 }
 

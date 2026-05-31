@@ -1,3 +1,5 @@
+import Button from '../ui/Button'
+
 function Pricing() {
     return (
         <div className='relative min-h-[1228px] z-[1000]'>
@@ -17,7 +19,7 @@ function Pricing() {
                                 <div className='h-[1px] border-[#2A407C] bg-[#2A407C] w-1/2 mt-[36px]'></div>
                                 <h1 className='font-bold text-[60px] leading-[70px] text-white mt-[28px]'><span className='font-bold text-[30px] leading-[35px]'>$</span>29</h1>
                                 <h3 className='font-normal text-[18px] leading-[27px] text-[#8794BA]'>per month</h3>
-                                <button type="button" className='border border-[#2A407C] mt-[40px] font-normal text-[16px] leading-[19px] px-[80px] py-[16px] rounded-[30px] text-white'>Order</button>
+                                <Button variant="outline" className='mt-[40px]'>Order</Button>
                             </div>
                             <div className='bg-[#FFF] dark:bg-[#172755] rounded-[30px] h-[440px] col-span-1 flex flex-col items-center justify-center relative z-[600]'>
                                 <h2 className='font-bold text-[30px] leading-[36px] text-[#172755] dark:text-white'>Standard</h2>
@@ -25,7 +27,7 @@ function Pricing() {
                                 <div className='h-[1px] border-[#2A407C] bg-[#D3D9E9] dark:bg-[#2A407C] w-1/2 mt-[36px]'></div>
                                 <h1 className='font-bold text-[60px] leading-[70px] text-[#172755] dark:text-white mt-[28px]'><span className='font-bold text-[30px] leading-[35px]'>$</span>99</h1>
                                 <h3 className='font-normal text-[18px] leading-[27px] text-[#8794BA]'>per month</h3>
-                                <button type="button" className='bg-[#EF2A82] mt-[40px] font-normal text-[16px] leading-[19px] px-[80px] py-[16px] rounded-[30px] text-white'>Order</button>
+                                <Button variant="primary" className='mt-[40px]'>Order</Button>
                             </div>
                             <div className='bg-[#0F1F4B] dark:bg-[#050a1f] rounded-[30px] h-[440px] col-span-1 flex flex-col items-center justify-center'>
                                 <h2 className='font-bold text-[30px] leading-[36px] text-white'>Premium</h2>
@@ -33,7 +35,7 @@ function Pricing() {
                                 <div className='h-[1px] border-[#2A407C] bg-[#2A407C] w-1/2 mt-[36px]'></div>
                                 <h1 className='font-bold text-[60px] leading-[70px] text-white mt-[28px]'><span className='font-bold text-[30px] leading-[35px]'>$</span>299</h1>
                                 <h3 className='font-normal text-[18px] leading-[27px] text-[#8794BA]'>per month</h3>
-                                <button type="button" className='border border-[#2A407C] mt-[40px] font-normal text-[16px] leading-[19px] px-[80px] py-[16px] rounded-[30px] text-white'>Order</button>
+                                <Button variant="outline" className='mt-[40px]'>Order</Button>
                             </div>
                         </div>
                     </div>

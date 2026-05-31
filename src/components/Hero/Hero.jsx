@@ -1,4 +1,5 @@
 import Header from '../Header/Header'
+import Button from '../ui/Button'
 
 function Hero() {
     return (
@@ -15,9 +16,9 @@ function Hero() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
                             </h3>
                             <div>
-                                <button type="button" className='mt-[20px] sm:mt-[50px] px-[80px] w-[238px] rounded-[68px] py-[16px] bg-[#EF2A82] inline-flex text-white text-[16px] leading-[18px] font-normal'>
+                                <Button variant="cta" size="cta">
                                     Try for free
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </div>

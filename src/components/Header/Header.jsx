@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useCallback, useEffect, useRef, useState } from 'react'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
+import Button from '../ui/Button'
 import useFocusTrap from '../../hooks/useFocusTrap'
 import useBodyScrollLock from '../../hooks/useBodyScrollLock'
 
@@ -52,8 +53,8 @@ function Header() {
         <div className="px-[24px] sm:px-[60px] 2xl:px-[210px] mx-auto pt-[50px]">
             <div className="flex items-center justify-between gap-4">
                 {/* Mobile hamburger - top-LEFT */}
-                <button
-                    type="button"
+                <Button
+                    variant="unstyled"
                     ref={hamburgerButtonRef}
                     onClick={openMenu}
                     aria-label="Open navigation menu"
@@ -62,7 +63,7 @@ function Header() {
                     className="block md:hidden cursor-pointer text-white order-1"
                 >
                     <HamburgerIcon />
-                </button>
+                </Button>
 
                 {/* Logo + desktop nav */}
                 <div className="flex items-center order-2 md:order-1">
@@ -89,7 +90,7 @@ function Header() {
                         <h3>Sign in</h3>
                     </li>
                     <li className="px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] flex items-center justify-center">
-                        <button type="button" className="whitespace-nowrap">Sign Up</button>
+                        <Button variant="unstyled" className="whitespace-nowrap">Sign Up</Button>
                     </li>
                 </ul>
 
@@ -124,14 +125,14 @@ function Header() {
                 >
                     <div className="flex items-center justify-between px-6 pt-6">
                         <img src="logo.png" alt="Analytics logo" className="h-8 w-auto" />
-                        <button
-                            type="button"
+                        <Button
+                            variant="unstyled"
                             onClick={closeMenu}
                             aria-label="Close navigation menu"
                             className="text-[#8794BA] hover:text-white cursor-pointer p-2 -mr-2"
                         >
                             <CloseIcon />
-                        </button>
+                        </Button>
                     </div>
 
                     <nav aria-label="Mobile">
@@ -152,13 +153,13 @@ function Header() {
                                 </a>
                             </li>
                             <li className="px-[43px] py-[10px] rounded-[68px] border border-[#465B95] cursor-pointer group hover:border-white flex items-center justify-center">
-                                <button
-                                    type="button"
+                                <Button
+                                    variant="unstyled"
                                     onClick={closeMenu}
                                     className="whitespace-nowrap group-hover:text-white"
                                 >
                                     Sign Up
-                                </button>
+                                </Button>
                             </li>
                         </ul>
                     </nav>
