@@ -74,8 +74,10 @@ function Header() {
                     </ul>
                     <ul className="hidden lg:flex items-center ml-[82px] gap-9 text-[#8794BA] text-[16px] leading-[18px] font-normal">
                         {NAV_ITEMS.map((item) => (
-                            <li key={item}>
-                                <h3>{item}</h3>
+                            <li key={item} className="hover:text-white">
+                                <a href={`#${item.toLowerCase()}`} className="cursor-pointer">
+                                    <h3>{item}</h3>
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -86,8 +88,10 @@ function Header() {
                     <li>
                         <ThemeToggle />
                     </li>
-                    <li className="hidden md:block">
-                        <h3>Sign in</h3>
+                    <li className="hidden md:block hover:text-white">
+                        <a href="#sign-in" className="cursor-pointer">
+                            <h3>Sign in</h3>
+                        </a>
                     </li>
                     <li>
                         <Button variant="signup" size="desktop">Sign Up</Button>
