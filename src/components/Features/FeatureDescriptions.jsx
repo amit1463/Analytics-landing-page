@@ -1,5 +1,3 @@
-import React from 'react'
-
 function FeatureDescriptions() {
     return (
         <div className='mx-[24px] sm:mx-[60px] lg:mx-[210px] mt-[130px] flex flex-col gap-[120px]'>

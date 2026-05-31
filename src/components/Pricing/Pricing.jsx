@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Pricing() {
     return (
         <div className='relative min-h-[1228px] z-[1000]'>

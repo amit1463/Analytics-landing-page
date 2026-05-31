@@ -1,5 +1,3 @@
-import React from 'react'
-
 function FeatureItems() {
   return (
     <div className='mx-[24px] sm:mx-[60px] lg:mx-[210px] pt-[38px]'>
