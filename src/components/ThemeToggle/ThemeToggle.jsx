@@ -51,6 +51,7 @@ function ThemeToggle({ className = '', onToggle }) {
     }
 
     const trackBg = isDark ? 'bg-[#172755]' : 'bg-[#465B95]'
+    // Track 56px - thumb 24px - 2*padding(2px) = 28px max travel; 26px keeps a hair of breathing room.
     const thumbPos = isDark ? 'translate-x-[26px]' : 'translate-x-0'
     const thumbColor = isDark ? 'text-[#172755]' : 'text-[#EF2A82]'
 
