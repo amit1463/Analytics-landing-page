@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Tailwind v4: enable class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
     :root {
         --font-display: "Roboto", sans-serif;
@@ -7,5 +10,13 @@
 
     body {
         font-family: var(--font-display);
+        background-color: #ffffff;
+        color: #172755;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .dark body {
+        background-color: #0b1430;
+        color: #e6ecff;
     }
 }
