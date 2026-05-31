@@ -35,7 +35,7 @@ function Hero() {
                             </li>
                         </ul>
                     </div>
-                    <div className='px-[24px] sm:px-[60px] 2xl:px-[210px] mx-auto pt-[50px]'>
+                    <div className='relative z-10 px-[24px] sm:px-[60px] 2xl:px-[210px] mx-auto pt-[50px]'>
                         <div className='flex items-center justify-between'>
                             <div className='flex'>
                                 <ul >
@@ -44,29 +44,29 @@ function Hero() {
                                     </li>
                                 </ul>
                                 <ul className='hidden lg:flex items-center ml-[82px] gap-9 text-[#8794BA] text-[16px] leading-[18px] font-normal'>
-                                    <li >
-                                        <h3>Products</h3>
+                                    <li className="hover:text-white cursor-pointer">
+                                        <a href="#products"><h3>Products</h3></a>
                                     </li>
-                                    <li>
-                                        <h3>Pricing</h3>
+                                    <li className="hover:text-white cursor-pointer">
+                                        <a href="#pricing"><h3>Pricing</h3></a>
                                     </li>
-                                    <li>
-                                        <h3>FAQ</h3>
+                                    <li className="hover:text-white cursor-pointer">
+                                        <a href="#faq"><h3>FAQ</h3></a>
                                     </li>
-                                    <li>
-                                        <h3>Blog</h3>
+                                    <li className="hover:text-white cursor-pointer">
+                                        <a href="#blog"><h3>Blog</h3></a>
                                     </li>
-                                    <li>
-                                        <h3>Contact</h3>
+                                    <li className="hover:text-white cursor-pointer">
+                                        <a href="#contact"><h3>Contact</h3></a>
                                     </li>
                                 </ul>
                             </div>
                             <ul className='hidden md:flex items-center text-[#8794BA] gap-[40px] text-[16px] '>
-                                <li className='hidden md:block'>
-                                    <h3>Sign in</h3>
+                                <li className='hidden md:block hover:text-white cursor-pointer'>
+                                    <a href="#signin"><h3>Sign in</h3></a>
                                 </li>
-                                <li className='px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] flex items-center justify-center'>
-                                    <button className='whitespace-nowrap'>Sign Up</button>
+                                <li className='px-[43px] sm:px-[53px] py-[5px] sm:py-[10px] rounded-[68px] border border-[#465B95] flex items-center justify-center cursor-pointer hover:border-white group'>
+                                    <button type="button" className='whitespace-nowrap cursor-pointer group-hover:text-white'>Sign Up</button>
                                 </li>
                             </ul>
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="block md:hidden cursor-pointer">
@@ -91,19 +91,20 @@ function Hero() {
                     </div>
                 </div>
             </div>
-            <div className='hidden md:block absolute top-0'>
-                <img src="/Subtract.svg" />
+            <div className='hidden md:block absolute top-0 pointer-events-none' aria-hidden="true">
+                <img src="/Subtract.svg" alt="" />
             </div>
-            <div className='absolute top-0 right-0 hidden 2xl:block'>
-                <img src="/Subtract.png" />
+            <div className='absolute top-0 right-0 hidden 2xl:block pointer-events-none' aria-hidden="true">
+                <img src="/Subtract.png" alt="" />
             </div>
-            <div className='absolute bottom-36 right-0 hidden xl:block'>
+            <div className='absolute bottom-36 right-0 hidden xl:block pointer-events-none' aria-hidden="true">
                 <img
                     src='/dashboard.png'
+                    alt=""
                     className='xl:max-w-[600px] 2xl:max-w-full 3xl:max-w-[800px]'
                 />
                 <div className='absolute top-32 -left-20'>
-                    <img src="/hero_chart.png" />
+                    <img src="/hero_chart.png" alt="" />
                 </div>
             </div>
         </div>
