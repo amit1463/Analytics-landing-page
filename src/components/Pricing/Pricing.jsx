@@ -1,4 +1,5 @@
 import React from 'react'
+import Advertising from '../Advertising/Advertising'
 
 function Pricing() {
     return (
@@ -40,6 +41,7 @@ function Pricing() {
                         </div>
                     </div>
                     <img src="/Pricing-icon.png" className='absolute bottom-0 right-0 z-[200]' />
+                    <Advertising />
                     <footer className='mt-[100px] px-[60px] 2xl:px-[210px] pb-10 xl:pb-0'>
                         <div className='border-t border-[#2A407C]'>
                             <div className='mt-[70px] flex flex-col gap-10 lg:flex-row items-center justify-between'>
